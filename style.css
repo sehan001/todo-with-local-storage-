@@ -1,4 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Main Styling */
+main {
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Button Styling */
+input#todo-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input#todo-input:focus {
+  border-color: #4caf50;
+}
+
+button#add-btn {
+  width: 25%;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button#add-btn:hover {
+  background-color: #45a049;
+}
+
+/* Task List Styling */
+ul#todo-list {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+ul#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  transition: background-color 0.2s ease-in-out, transform 0.2s;
+}
+
+ul#todo-list li:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.01);
+}
+
+/* Completed Task Styling */
 .completed {
   text-decoration: line-through;
-  color: brown;
+  color: #999;
+  background-color: #e6ffe6;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.completed:hover {
+  transform: scale(1.05);
+}
+
+/* Delete Button Styling */
+ul#todo-list li button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+ul#todo-list li button:hover {
+  background-color: #e60000;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  input#todo-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button#add-btn {
+    width: 100%;
+  }
+
+  ul#todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul#todo-list li button {
+    margin-top: 5px;
+  }
 }
